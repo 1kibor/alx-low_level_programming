@@ -2,7 +2,7 @@
 /**
 *more_numbers - prints numbers from 0 to 14, 10 times followed by a new line
 *
-*Return: returns nothing
+*Return: returns 0, 
 */
 void more_numbers(void)
 {
