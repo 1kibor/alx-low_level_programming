@@ -1,24 +1,29 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * _strspn - function that prints the consecutive characters of s1 that are in s2.
+ * _strpbrk - prints the consecutive caracters of s1 that are in s2.
  * @s: source string
  * @accept: searching string
  *
  * Return: new string.
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	unsigned int a, b;
 
-	for (b = 0; *(s + b); b++)
+	for (a = 0; *(s + a); a++)
 	{
-		for (a = 0; *(accept + a); a++)
+		for (b = 0; *(accept + b); b++)
 		{
-			if (*(s + b) == *(accept + a))
+			if (*(s + a) == *(accept + b))
+			{
 				break;
+			}
 		}
-	if (*(accept + a) == '\0')
-		break;
+		if (*(accept + b) != '\0')
+		{
+			return (s + a);
+		}
 	}
-	return (b);
+	return (0);
 }
