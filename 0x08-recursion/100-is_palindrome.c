@@ -1,20 +1,21 @@
 #include "main.h"
-/*
- * palindrom1 - obtains length of a
+
+/**
+ * palindrome - obtains length of a
  * @a: string
  * @l: integer to count length
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int palindrom1(char *a, int lg)
+int palindrome(char *s, int l)
 {
-	if (*a == 0)
-		return (lg - 1);
-	return (palindrom1(a + 1, lg + 1));
+	if (*s == 0)
+		return (l - 1);
+	return (palindrome(s + 1, l + 1));
 }
 /**
- * palindrom2 - compares string vs string reverse
+ * palind1 - compares string vs string reverse
  * @a: string
  * @l: length
  *
@@ -22,24 +23,25 @@ int palindrom1(char *a, int lg)
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palindrom2(char *a, int lg)
+int palind1(char *s, int l)
 {
-	if (*a != *(a + lg))
+	if (*s != *(s + l))
 		return (0);
-	else if (*a == 0)
+	else if (*s == 0)
 		return (1);
-	return (palindrom2(a + 1, lg - 2));
+	return (palind1(s + 1, l - 2));
 }
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: string to evaluate
  *
  * Return: On success 1.
- * otherwise,return 0.
-int is_palindrome(char *s)
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int is_palindrome(char *a)
 {
 	int l;
 
-	lg = palindrom1(s, 0);
-	return (palindrom2(s, l));
+	l = palind2(a, 0);
+	return (palind1(a, l));
 }
