@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_number - function that prints an integer.
+ * print_number - print an int numbers.
  * @n: number tested
  * Return: Always 0.
  */
 void print_number(int n)
 {
-	int a, b, digit, digits, power;
+	int i, j, digit, digits, power;
 	unsigned int temp, numchar, number;
 
 	digit = 0;
@@ -29,18 +29,18 @@ void print_number(int n)
 	}
 	digits = digit + 1;
 	power = 1;
-	a = 1;
+	i = 1;
 
 	while (i < digits)
 	{
 		power = power * 10;
-		a++;
+		i++;
 	}
-	b = power;
-	while (b >= 1)
+	j = power;
+	while (j >= 1)
 	{
-		numchar = (temp / b) % 10;
+		numchar = (temp / j) % 10;
 		_putchar(numchar + '0');
-		b = b / 10;
+		j = j / 10;
 	}
 }
