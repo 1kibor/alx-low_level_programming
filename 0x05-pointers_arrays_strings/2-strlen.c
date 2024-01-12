@@ -1,20 +1,18 @@
 #include "main.h"
-/**
- * _strlen - returns the length of a string
+/*
+ * _strlen - swaps two values
+ * @s: string
  *
- * @s:string 
- *
- * Return: length of the string
+ * Return: On success 1.
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (*s != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
 		i++;
-		s++;
 	}
-
 	return (i);
 }
