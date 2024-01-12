@@ -1,6 +1,6 @@
 #include "main.h"
-/*
- * _strlen - swaps two values
+/**
+ * _strlen - returns the length of a string
  * @s: string
  *
  * Return: On success 1.
