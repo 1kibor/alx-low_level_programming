@@ -1,11 +1,10 @@
 #include "main.h"
-/*
- * swap_int - swaps the values of two integers
- * @a: integer pointer
- * @b: integer pointer
+/**
+ * swap_int - swaps two values
+ * @a: integer 
+ * @b: integer 
  *
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
  */
 void swap_int(int *a, int *b)
 {
