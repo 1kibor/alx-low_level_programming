@@ -8,18 +8,18 @@
  *
  * Return: the pointer to dest
  */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
-	int len, i;
+	int p, i;
 
-	len = 0;
+	p = 0;
 
-	while (src[len] != '\0')
+	while (src[p] != '\0')
 	{
-		len++;
+		p++;
 	}
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < p; i++)
 	{
 		dest[i] = src[i];
 	}
