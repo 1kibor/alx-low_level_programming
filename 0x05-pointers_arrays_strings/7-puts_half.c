@@ -1,7 +1,6 @@
 #include "main.h"
-/**
- * puts_half - fxn that prints half of a string, 
- *followed by a new line
+/*
+ * puts_half - fxn that prints half of a string, followed by a new line
  *
  * @str: string to be printed
  */
