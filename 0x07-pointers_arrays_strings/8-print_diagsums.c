@@ -7,20 +7,20 @@
  */
 void print_diagsums(int *a, int size)
 {
-        int x, y, sum_1 = 0, sum_2 = 0, k, l = 0;
+	int i, j, sum1 = 0, sum2 = 0, k, l = 0;
 
-        k = size - 1;
-        for (x = 0; x < size; x++)
-        {
-                for (y = 0; y < size; y++)
-                {
-                        if (x == y)
-                                sum_1 += a[l];
-                        if (y == k)
-                                sum_2 += a[l];
-                        l++;
-                }
-                k--;
-        }
-        printf("%x, %x\n", sum_1, sum_2);
+	k = size - 1;
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
+		{
+			if (i == j)
+				sum1 += a[l];
+			if (j == k)
+				sum2 += a[l];
+			l++;
+		}
+		k--;
+	}
+	printf("%i, %i\n", sum1, sum2);
 }
