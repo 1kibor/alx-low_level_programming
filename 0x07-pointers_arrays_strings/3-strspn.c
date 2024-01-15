@@ -1,24 +1,26 @@
 #include "main.h"
-/**
- * _strspn - function that prints the consecutive caracters of s1 that are in s2.
- * @s: source string
- * @accept: searching string
+/*
+ * _strspn - function that gets the length of a prefix substring
+ *@s: first value -char
+ *@accept: second value - char
  *
- * Return: new string.
+ * Return: char with result
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a, b;
+	int j = 0, i = 0;
+	unsigned int a = 0;
 
-	for (b = 0; *(s + b); b++)
+	while (s[i] != ' ' && s[i] != '\0')
 	{
-		for (a = 0; *(accept + a); a++)
+		while (accept[j] != '\0')
 		{
-			if (*(s + b) == *(accept + a))
-				break;
+			if (s[i] == accept[j])
+				a++;
+			j++;
 		}
-	if (*(accept + a) == '\0')
-		break;
+		i++;
+		j = 0;
 	}
-	return (b);
+	return (a);
 }
