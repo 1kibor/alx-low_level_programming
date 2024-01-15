@@ -1,6 +1,6 @@
 #include "main.h"
-/*
- * _strspn-function that prints the consecutive characters of s1 that are in s2
+/**
+ * _strspn - function that prints the consecutive caracters of s1 that are in s2.
  * @s: source string
  * @accept: searching string
  *
